@@ -42,7 +42,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayout());
         injectDependencies();
-        injectViews();
+        bindViews();
+        setupToolbar();
     }
 
     @Override
@@ -93,7 +94,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * Every object annotated with {@link butterknife.Bind} its gonna injected trough butterknife
      */
-    private void injectViews() {
+    private void bindViews() {
         ButterKnife.bind(this);
     }
 

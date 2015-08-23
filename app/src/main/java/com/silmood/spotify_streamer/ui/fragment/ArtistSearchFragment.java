@@ -12,6 +12,7 @@ import com.silmood.spotify_streamer.component.DaggerArtistSearchComponent;
 import com.silmood.spotify_streamer.domain.Artist;
 import com.silmood.spotify_streamer.module.ArtistSearchModule;
 import com.silmood.spotify_streamer.presenter.ArtistSearchPresenter;
+import com.silmood.spotify_streamer.ui.activity.ArtistDetailActivity;
 import com.silmood.spotify_streamer.ui.adapter.SearchResultsAdapter;
 import com.silmood.spotify_streamer.ui.viewmodel.ArtistSearchView;
 import com.silmood.spotify_streamer.ui.view.ClearableEditText;
@@ -107,6 +108,6 @@ public class ArtistSearchFragment extends BaseFragment implements ArtistSearchVi
 
     @Override
     public void onItemClicked(int position) {
-        //Launch artist detail
+        startActivity(ArtistDetailActivity.buildIntent(CONTEXT));
     }
 }
