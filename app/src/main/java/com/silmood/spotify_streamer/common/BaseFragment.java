@@ -13,6 +13,7 @@ import com.silmood.spotify_streamer.SpotifyStreamerApp;
 import com.silmood.spotify_streamer.SpotifyStreamerComponent;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by Pedro Antonio Hernández on 14/06/2015.
@@ -25,6 +26,7 @@ import butterknife.ButterKnife;
 public abstract class BaseFragment extends Fragment{
 
     protected Context CONTEXT;
+    private Unbinder viewUnbinder;
 
     @Override
     public void onAttach(Activity activity) {
@@ -83,11 +85,11 @@ public abstract class BaseFragment extends Fragment{
      * Replace all the annotated fields with ButterKnife annotations with the proper value
      * */
     private void bindViews(View rootView) {
-        ButterKnife.bind(this, rootView);
+        viewUnbinder = ButterKnife.bind(this, rootView);
     }
 
     private void unbindViews() {
-        //ButterKnife.unbind(this);
+        viewUnbinder.unbind();
     }
 
     /**

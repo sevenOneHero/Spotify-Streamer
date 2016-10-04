@@ -19,7 +19,6 @@ public class ArtistSearchActivity extends BaseActivity{
     @Override
     protected int getLayout() {
         return R.layout.activity_artist_search;
-
     }
 
     @Override

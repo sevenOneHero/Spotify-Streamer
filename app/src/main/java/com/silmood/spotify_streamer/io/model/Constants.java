@@ -6,8 +6,6 @@ package com.silmood.spotify_streamer.io.model;
  * Keys for the JSON objects responses
  */
 public class Constants {
-
-
     public static final String ARTISTS_RESPONSE = "artists";
     public static final String ITEMS = "items";
     public static final String IMAGES = "images";
